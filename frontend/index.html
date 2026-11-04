@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentinel-AI Frontend</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sentinel-AI Search Console</h1>
+
+      <section class="panel">
+        <h2>Vector Search</h2>
+        <textarea id="vectorQuery" rows="3" placeholder="Enter a search phrase...">drone deliveries and soil microorganisms</textarea>
+        <button id="vectorBtn">Run Vector Search</button>
+      </section>
+
+      <section class="panel">
+        <h2>SQL Query</h2>
+        <textarea id="sqlQuery" rows="3" placeholder="SELECT COUNT(*) FROM videos;">SELECT COUNT(*) FROM videos;</textarea>
+        <button id="sqlBtn">Run SQL Query</button>
+      </section>
+
+      <section class="panel">
+        <h2>Agent Query</h2>
+        <label for="openaiKey">OpenAI API Key</label>
+        <input id="openaiKey" type="password" placeholder="sk-..." style="width: 100%; margin-bottom: 12px; padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #1f2937; color: #e5e7eb;" />
+        <textarea id="agentPrompt" rows="3" placeholder="Ask the agent a question...">What is the total view count of unverified accounts with claim status 'claim'?</textarea>
+        <button id="agentBtn">Run Agent</button>
+      </section>
+
+      <section class="panel output-panel">
+        <h2>Response</h2>
+        <pre id="responseBox">Ready...</pre>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
